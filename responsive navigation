@@ -1,0 +1,122 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+ <nav class="navig">
+          <input type="checkbox" id="check">
+          <label for="check" class="checkbtn">
+              <i class="fas fa-bars"></i>
+          </label>
+          <label class="logo">Ūla Marija ir Tadas</label>
+        <ul class="links">
+            <li><a class="active" href="index.html">Pradžia</a></li>
+          <li><a  href="#"></a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+        </ul>
+      </nav>
+
+
+*{
+    padding:0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing:border-box ;
+}
+
+nav{
+    background: orange;
+    height:50px;
+    width:100%;
+
+}
+label.logo{
+    color:white;
+    font-size:35px;
+    line-height:50px;
+    padding:0 75px;
+    font-weight: bold;
+}
+nav ul{
+    float:right;
+    margin-right:20px;
+}
+nav ul li{
+    display:inline-block;
+    line-height:50px;
+    margin:0 5px;
+}
+nav ul li a{
+    color:white;
+    font-size:17px;
+    padding:7px 9px;
+    text-transform:uppercase;
+}
+a:hover,a.active{
+    border:1px solid white;
+    border-radius: 5px;
+    transition: .5s;
+    background:white;
+    color:orange;
+}
+.checkbtn{
+    font-size:30px;
+    color:white;
+    float:right;
+    line-height: 50px;
+    margin-right:20px;
+    cursor:pointer;
+    display:none;
+}
+#check{
+    display:none;
+}
+body{
+font-family:Poppins,sans-serif;
+}
+@media(max-width:952px){
+    label.logo{
+        font-size:25px;
+        padding:0 30px;
+    }
+    nav ul li a{
+        font-size:13px;
+    }
+    p{
+        font-size:50px;
+    }
+
+}
+@media(max-width:800px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width:100%;
+        height: 100vh;
+        background:orange;
+        /*top:80px;*/
+        left:-100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 2;
+    }
+    nav ul li{
+        display:block;
+    }
+    nav ul li a{
+        font-size:20px;
+    }
+    a:hover,a.active{
+        background:none;
+        border:1px solid white;
+        border-radius: 5px;
+        transition: .5s;
+        background:white;
+        color:orange;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+
+}
